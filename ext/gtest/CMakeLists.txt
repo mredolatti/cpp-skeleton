@@ -9,6 +9,8 @@ ExternalProject_Add(googletest
                -DCMAKE_CXX_FLAGS=${MSVC_COMPILER_DEFS}
                -Dgtest_force_shared_crt=ON
                -DBUILD_GTEST=ON
+               -DGTEST_USE_OWN_TR1_TUPLE=0
+
      PREFIX "${CMAKE_CURRENT_BINARY_DIR}"
 # Disable install step
     INSTALL_COMMAND ""

@@ -3,6 +3,8 @@
 
 int main()
 {
-    std::cout << boost::format("hola %1%") % 123 << std::endl;
+    []() {
+        std::cout << boost::format("hola %1%") % 123 << std::endl;
+    }();
     return 0;
 }

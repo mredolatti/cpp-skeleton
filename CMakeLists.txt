@@ -14,6 +14,8 @@ set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 # Add main sources
 add_subdirectory(src)
 
+# Enable c++11
+SET(CMAKE_CXX_FLAGS -std=c++11)
 
 
 #########################
@@ -57,7 +59,6 @@ file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 add_executable(${PROJECT_TEST_NAME} ${TEST_SRC_FILES})
 
 add_dependencies(${PROJECT_TEST_NAME} googletest)
-
 
 if(NOT WIN32)
     target_link_libraries(${PROJECT_TEST_NAME}
